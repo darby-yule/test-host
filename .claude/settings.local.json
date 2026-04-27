@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx tsc *)",
+      "Bash(npx vite *)",
+      "mcp__320d84d0-9110-4280-ae30-b8fbc3d4f4f9__netlify-project-services-reader",
+      "Bash(ssh -T git@github.com)",
+      "Read(//Users/darby.yule/.ssh/**)",
+      "Bash(ssh-keygen -t ed25519 -C \"darby-yule\" -f ~/.ssh/id_darby_yule -N \"\")",
+      "Bash(pbcopy)",
+      "Bash(sort -k1)",
+      "Bash(git --version)",
+      "Bash(xargs ls *)",
+      "Bash(awk '{print $5, $9}')",
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(git commit *)"
+    ]
+  }
+}
