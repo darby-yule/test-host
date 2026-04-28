@@ -83,7 +83,7 @@ const submission = {
             data-animate
           >
             {/* Name Field */}
-            <div className="flex flex-col gap-2 items-start w-full">
+            <div className="flex flex-col gap-2 items-start w-full" data-animate="stagger-1">
               <p className="font-['Neue_Haas_Grotesk_Display_Pro:55_Roman',sans-serif] leading-[28px] md:leading-[32px] text-[#333] text-[14px] md:text-[16px] tracking-[0.64px]">
                 Name
               </p>
@@ -101,7 +101,7 @@ const submission = {
             </div>
 
             {/* Email Field */}
-            <div className="flex flex-col gap-2 items-start w-full">
+            <div className="flex flex-col gap-2 items-start w-full" data-animate="stagger-2">
               <p className="font-['Neue_Haas_Grotesk_Display_Pro:55_Roman',sans-serif] leading-[28px] md:leading-[32px] text-[#333] text-[14px] md:text-[16px] tracking-[0.64px]">
                 Email
               </p>
@@ -119,7 +119,7 @@ const submission = {
             </div>
 
             {/* Message Field */}
-            <div className="flex flex-col gap-2 items-start w-full">
+            <div id="contact-message" className="flex flex-col gap-2 items-start w-full" data-animate="stagger-3">
               <p className="font-['Neue_Haas_Grotesk_Display_Pro:55_Roman',sans-serif] leading-[28px] md:leading-[32px] text-[#333] text-[14px] md:text-[16px] tracking-[0.64px]">
                 Message
               </p>
@@ -137,11 +137,13 @@ const submission = {
             </div>
 
             {/* Submit Button */}
-            <button className="bg-[#8b9544] hover:bg-[#7a8239] transition-colors px-6 md:px-8 py-3 md:py-4 rounded-[8px] self-start" onClick={() => submit()} disabled={loading}>
-              <p className="font-['Neue_Haas_Grotesk_Display_Pro:65_Medium',sans-serif] leading-[28px] md:leading-[32px] text-[#f1eee7] text-[14px] md:text-[16px] tracking-[0.64px]">
-                {loading ? "Sending..." : "Send Message"}
-              </p>
-            </button>
+            <div data-animate="stagger-4" className="self-start">
+              <button className="bg-[#8b9544] hover:bg-[#7a8239] transition-colors px-6 md:px-8 py-3 md:py-4 rounded-[8px]" onClick={() => submit()} disabled={loading}>
+                <p className="font-['Neue_Haas_Grotesk_Display_Pro:65_Medium',sans-serif] leading-[28px] md:leading-[32px] text-[#f1eee7] text-[14px] md:text-[16px] tracking-[0.64px]">
+                  {loading ? "Sending..." : "Send Message"}
+                </p>
+              </button>
+            </div>
           </div>
         </div>
       </div>

@@ -208,22 +208,22 @@ function LandingPage() {
       {/* MOTION: Fade in heartbeat content */}
       <section className="min-h-[500px] md:min-h-[700px] lg:min-h-[891px] relative py-12 md:py-16 lg:py-[100px] px-4 sm:px-8 md:px-12 lg:px-16 heartbeat-fade" data-animate>
         <div className="flex flex-col items-center justify-center size-full">
-          <div className="w-full max-w-6xl mx-auto flex flex-col items-center justify-center gap-8 md:gap-12" data-animate>
+          <div className="w-full max-w-6xl mx-auto flex flex-col items-center justify-center gap-8 md:gap-12">
             {/* Top Line */}
-            <div className="w-full max-w-2xl h-px bg-[#555555]" />
+            <div className="w-full max-w-2xl h-px bg-[#555555]" data-animate="stagger-1" />
 
             {/* Headline */}
-            <p className="font-['Neue_Haas_Grotesk_Display_Pro:75_Bold',sans-serif] leading-tight md:leading-normal text-[#333] text-[24px] sm:text-[32px] md:text-[40px] lg:text-[48px] text-center tracking-[1.2px] md:tracking-[1.92px] uppercase px-4 md:px-8">
+            <p className="font-['Neue_Haas_Grotesk_Display_Pro:75_Bold',sans-serif] leading-tight md:leading-normal text-[#333] text-[24px] sm:text-[32px] md:text-[40px] lg:text-[48px] text-center tracking-[1.2px] md:tracking-[1.92px] uppercase px-4 md:px-8" data-animate="stagger-2">
               <span className="text-[#8b9544]">Brands need a heartbeat.</span>
               <span> We Craft strategic, high-impact Web Content that resonates with real people in real moments.</span>
             </p>
 
             {/* Bottom Line */}
-            <div className="w-full max-w-2xl h-px bg-[#555555]" />
+            <div className="w-full max-w-2xl h-px bg-[#555555]" data-animate="stagger-3" />
 
             {/* ASSET REPLACED: Heartbeat Section image */}
             {/* MOTION: Fade in logo on scroll */}
-            <div className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] lg:w-[111px] lg:h-[111px] relative flex items-center justify-center" data-animate>
+            <div className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] lg:w-[111px] lg:h-[111px] relative flex items-center justify-center" data-animate="fade">
               <img src="/wp-content/2025/10/cropped-frame-13.png" alt="" className="w-full h-full object-contain" />
             </div>
           </div>
@@ -235,8 +235,8 @@ function LandingPage() {
         <div className="w-full max-w-7xl mx-auto">
           <div className="flex flex-col gap-8 md:gap-12 lg:gap-[80px] w-full">
             {/* Section Header */}
-            {/* MOTION: Fade in section header */}
-            <p className="font-['Neue_Haas_Grotesk_Display_Pro:75_Bold',sans-serif] leading-tight md:leading-normal text-[#8b9544] text-[32px] md:text-[40px] lg:text-[48px] tracking-[1.2px] md:tracking-[1.92px] uppercase" data-animate>
+            {/* MOTION: Slide-in from left for section header */}
+            <p className="font-['Neue_Haas_Grotesk_Display_Pro:75_Bold',sans-serif] leading-tight md:leading-normal text-[#8b9544] text-[32px] md:text-[40px] lg:text-[48px] tracking-[1.2px] md:tracking-[1.92px] uppercase" data-animate="from-left">
               Stories & Case Studies
             </p>
             
@@ -491,8 +491,8 @@ function LandingPage() {
                 label: 'AI',
                 pills: ['AI Adoption', 'Prompt Engineering', 'AI Tool Development', 'AI Automation', 'Content Design for AI'],
               },
-            ].map((service) => (
-              <div key={service.id} className="border-t border-[#ccc] last:border-b">
+            ].map((service, index) => (
+              <div key={service.id} className="border-t border-[#ccc] last:border-b" data-animate={`stagger-${index + 1}`}>
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between py-6 md:py-8 lg:py-10 gap-4 lg:gap-[60px]">
                   <button
                     className="flex items-center justify-between lg:justify-start gap-4 text-left w-full lg:w-auto lg:flex-shrink-0 group"
@@ -527,15 +527,15 @@ function LandingPage() {
       <section id="about" className="bg-[#f1eee7] relative w-full py-8 md:py-12 lg:py-16 px-4 sm:px-8 md:px-12 lg:px-[80px]" data-animate>
         <div className="w-full max-w-7xl mx-auto">
           <div className="flex flex-col gap-8 md:gap-12 lg:gap-[80px] w-full">
-            {/* MOTION: Fade in section header */}
-            <p className="font-['Neue_Haas_Grotesk_Display_Pro:75_Bold',sans-serif] leading-tight md:leading-normal text-[#8b9544] text-[32px] md:text-[40px] lg:text-[48px] tracking-[1.2px] md:tracking-[1.92px] uppercase" data-animate>About</p>
+            {/* MOTION: Slide-in from left for section header */}
+            <p className="font-['Neue_Haas_Grotesk_Display_Pro:75_Bold',sans-serif] leading-tight md:leading-normal text-[#8b9544] text-[32px] md:text-[40px] lg:text-[48px] tracking-[1.2px] md:tracking-[1.92px] uppercase" data-animate="from-left">About</p>
             
             {/* About Content */}
             {/* MOTION: Staggered entrance for about content */}
             <div className="flex flex-col lg:flex-row gap-8 md:gap-12 lg:gap-[80px] items-start w-full">
               {/* Photo */}
               {/* CHANGE 2: Width constraint - max 429px */}
-              <div className="w-full lg:w-auto flex-shrink-0" data-animate="stagger-1">
+              <div className="w-full lg:w-auto flex-shrink-0" data-animate="fade">
                 <img alt="" src={imgDarbyBio21} className="max-w-[429px] w-full h-auto" />
               </div>
               
@@ -564,46 +564,46 @@ function LandingPage() {
       <section id="collaborators" className="bg-[#f1eee7] relative w-full py-8 md:py-12 lg:py-16 px-4 sm:px-8 md:px-12 lg:px-[80px]" data-animate>
         <div className="w-full max-w-7xl mx-auto">
           <div className="flex flex-col gap-8 md:gap-12 lg:gap-[80px] w-full">
-            {/* MOTION: Fade in section header */}
-            <p className="font-['Neue_Haas_Grotesk_Display_Pro:75_Bold',sans-serif] leading-tight md:leading-normal text-[#8b9544] text-[32px] md:text-[40px] lg:text-[48px] tracking-[1.2px] md:tracking-[1.92px] uppercase" data-animate>Collaborators</p>
+            {/* MOTION: Slide-in from left for section header */}
+            <p className="font-['Neue_Haas_Grotesk_Display_Pro:75_Bold',sans-serif] leading-tight md:leading-normal text-[#8b9544] text-[32px] md:text-[40px] lg:text-[48px] tracking-[1.2px] md:tracking-[1.92px] uppercase" data-animate="from-left">Collaborators</p>
             
             {/* Logo Grid */}
-            {/* MOTION: Subtle hover effect on logos */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6 lg:gap-8 w-full" data-animate>
-              <div className="aspect-[3/2] relative logo-hover">
+            {/* MOTION: Staggered entrance + hover effect on logos */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6 lg:gap-8 w-full">
+              <div className="aspect-[3/2] relative logo-hover" data-animate="stagger-1">
                 <img alt="" className="w-full h-full object-contain" src={imgLogo13} />
               </div>
-              <div className="aspect-[3/2] relative logo-hover">
+              <div className="aspect-[3/2] relative logo-hover" data-animate="stagger-2">
                 <img alt="" className="w-full h-full object-contain" src={imgLogo21} />
               </div>
-              <div className="aspect-[3/2] relative logo-hover">
+              <div className="aspect-[3/2] relative logo-hover" data-animate="stagger-3">
                 <img alt="" className="w-full h-full object-contain" src={imgLogo31} />
               </div>
-              <div className="aspect-[3/2] relative logo-hover">
+              <div className="aspect-[3/2] relative logo-hover" data-animate="stagger-4">
                 <img alt="" className="w-full h-full object-contain" src={imgLogo41} />
               </div>
-              <div className="aspect-[3/2] relative logo-hover">
+              <div className="aspect-[3/2] relative logo-hover" data-animate="stagger-5">
                 <img alt="" className="w-full h-full object-contain" src={imgLogo51} />
               </div>
-              <div className="aspect-[3/2] relative logo-hover">
+              <div className="aspect-[3/2] relative logo-hover" data-animate="stagger-6">
                 <img alt="" className="w-full h-full object-contain" src={imgLogo71} />
               </div>
-              <div className="aspect-[3/2] relative logo-hover">
+              <div className="aspect-[3/2] relative logo-hover" data-animate="stagger-7">
                 <img alt="" className="w-full h-full object-contain" src={imgLogo61} />
               </div>
-              <div className="aspect-[3/2] relative logo-hover">
+              <div className="aspect-[3/2] relative logo-hover" data-animate="stagger-8">
                 <img alt="" className="w-full h-full object-contain" src={imgLogo81} />
               </div>
-              <div className="aspect-[3/2] relative logo-hover">
+              <div className="aspect-[3/2] relative logo-hover" data-animate="stagger-9">
                 <img alt="" className="w-full h-full object-contain" src={imgLogo91} />
               </div>
-              <div className="aspect-[3/2] relative logo-hover">
+              <div className="aspect-[3/2] relative logo-hover" data-animate="stagger-10">
                 <img alt="" className="w-full h-full object-contain" src={imgLogo101} />
               </div>
-              <div className="aspect-[3/2] relative logo-hover">
+              <div className="aspect-[3/2] relative logo-hover" data-animate="stagger-11">
                 <img alt="" className="w-full h-full object-contain" src={imgLogo111} />
               </div>
-              <div className="aspect-[3/2] relative logo-hover">
+              <div className="aspect-[3/2] relative logo-hover" data-animate="stagger-12">
                 <img alt="" className="w-full h-full object-contain" src={imgLogo121} />
               </div>
             </div>
