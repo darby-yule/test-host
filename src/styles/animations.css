@@ -69,51 +69,59 @@
    ENTRANCE ANIMATIONS (On Scroll)
    ============================================ */
 
-/* Base state: invisible */
+/* Base state: invisible + very subtle lift */
 [data-animate] {
   opacity: 0;
-  transition: opacity 1000ms ease;
+  transform: translateY(14px);
+  transition: opacity 900ms ease, transform 900ms ease;
 }
 
-/* Animated-in state */
 [data-animate].animate-in {
   opacity: 1;
+  transform: translateY(0);
 }
 
-/* from-left and fade are now identical to base — kept for clarity */
+/* Section headings slide in gently from the left */
 [data-animate="from-left"] {
   opacity: 0;
-  transition: opacity 1000ms ease;
+  transform: translateX(-16px);
+  transition: opacity 900ms ease, transform 900ms ease;
 }
 
 [data-animate="from-left"].animate-in {
   opacity: 1;
+  transform: translateX(0);
 }
 
+/* Images / large blocks — fade only, no positional shift */
 [data-animate="fade"] {
   opacity: 0;
+  transform: none;
   transition: opacity 1000ms ease;
 }
 
 [data-animate="fade"].animate-in {
   opacity: 1;
+  transform: none;
 }
 
 /* (heartbeat section removed — content elements use stagger-1..4 directly) */
 
-/* Staggered fade-ins */
-[data-animate="stagger-1"]  { opacity: 0; transition: opacity 1000ms ease; transition-delay: 0ms; }
-[data-animate="stagger-2"]  { opacity: 0; transition: opacity 1000ms ease; transition-delay: 120ms; }
-[data-animate="stagger-3"]  { opacity: 0; transition: opacity 1000ms ease; transition-delay: 240ms; }
-[data-animate="stagger-4"]  { opacity: 0; transition: opacity 1000ms ease; transition-delay: 360ms; }
-[data-animate="stagger-5"]  { opacity: 0; transition: opacity 1000ms ease; transition-delay: 480ms; }
-[data-animate="stagger-6"]  { opacity: 0; transition: opacity 1000ms ease; transition-delay: 600ms; }
-[data-animate="stagger-7"]  { opacity: 0; transition: opacity 1000ms ease; transition-delay: 80ms; }
-[data-animate="stagger-8"]  { opacity: 0; transition: opacity 1000ms ease; transition-delay: 160ms; }
-[data-animate="stagger-9"]  { opacity: 0; transition: opacity 1000ms ease; transition-delay: 240ms; }
-[data-animate="stagger-10"] { opacity: 0; transition: opacity 1000ms ease; transition-delay: 320ms; }
-[data-animate="stagger-11"] { opacity: 0; transition: opacity 1000ms ease; transition-delay: 400ms; }
-[data-animate="stagger-12"] { opacity: 0; transition: opacity 1000ms ease; transition-delay: 480ms; }
+/* Staggered: lift + fade, each step 120 ms apart */
+/* stagger-1..6 are used for cards, form fields, heartbeat elements (sequential) */
+/* stagger-7..12 are used for logos (within-row grouping, shorter gaps) */
+[data-animate="stagger-1"]  { opacity: 0; transform: translateY(14px); transition: opacity 900ms ease, transform 900ms ease; transition-delay: 0ms; }
+[data-animate="stagger-2"]  { opacity: 0; transform: translateY(14px); transition: opacity 900ms ease, transform 900ms ease; transition-delay: 120ms; }
+[data-animate="stagger-3"]  { opacity: 0; transform: translateY(14px); transition: opacity 900ms ease, transform 900ms ease; transition-delay: 240ms; }
+[data-animate="stagger-4"]  { opacity: 0; transform: translateY(14px); transition: opacity 900ms ease, transform 900ms ease; transition-delay: 360ms; }
+[data-animate="stagger-5"]  { opacity: 0; transform: translateY(14px); transition: opacity 900ms ease, transform 900ms ease; transition-delay: 480ms; }
+[data-animate="stagger-6"]  { opacity: 0; transform: translateY(14px); transition: opacity 900ms ease, transform 900ms ease; transition-delay: 600ms; }
+[data-animate="stagger-7"]  { opacity: 0; transform: translateY(14px); transition: opacity 900ms ease, transform 900ms ease; transition-delay: 80ms; }
+[data-animate="stagger-8"]  { opacity: 0; transform: translateY(14px); transition: opacity 900ms ease, transform 900ms ease; transition-delay: 160ms; }
+[data-animate="stagger-9"]  { opacity: 0; transform: translateY(14px); transition: opacity 900ms ease, transform 900ms ease; transition-delay: 240ms; }
+[data-animate="stagger-10"] { opacity: 0; transform: translateY(14px); transition: opacity 900ms ease, transform 900ms ease; transition-delay: 320ms; }
+[data-animate="stagger-11"] { opacity: 0; transform: translateY(14px); transition: opacity 900ms ease, transform 900ms ease; transition-delay: 400ms; }
+[data-animate="stagger-12"] { opacity: 0; transform: translateY(14px); transition: opacity 900ms ease, transform 900ms ease; transition-delay: 480ms; }
 
 [data-animate="stagger-1"].animate-in,
 [data-animate="stagger-2"].animate-in,
@@ -128,6 +136,7 @@
 [data-animate="stagger-11"].animate-in,
 [data-animate="stagger-12"].animate-in {
   opacity: 1;
+  transform: translateY(0);
 }
 
 /* ============================================
