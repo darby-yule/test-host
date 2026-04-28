@@ -108,6 +108,22 @@ function LandingPage() {
     };
   }, []);
 
+  // Hash-based scroll: in an SPA the browser fires the hash scroll before React
+  // has rendered any elements, so we re-execute it manually after mount.
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (!hash) return;
+    const id = hash.replace('#', '');
+    // Short delay lets React finish painting and the observer run first
+    const timer = setTimeout(() => {
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 120);
+    return () => clearTimeout(timer);
+  }, []);
+
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
     e.preventDefault();
     // CHANGE 3: Close mobile menu on navigation

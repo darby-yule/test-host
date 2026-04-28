@@ -69,11 +69,11 @@
    ENTRANCE ANIMATIONS (On Scroll)
    ============================================ */
 
-/* Base state: hidden and slightly translated down */
+/* Base state: hidden and very slightly translated down */
 [data-animate] {
   opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 700ms ease-out, transform 700ms ease-out;
+  transform: translateY(10px);
+  transition: opacity 900ms ease, transform 900ms ease;
 }
 
 /* Animated-in state */
@@ -85,8 +85,8 @@
 /* Slide-from-left variant — for section headings */
 [data-animate="from-left"] {
   opacity: 0;
-  transform: translateX(-20px);
-  transition: opacity 700ms ease-out, transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+  transform: translateX(-14px);
+  transition: opacity 900ms ease, transform 900ms ease;
 }
 
 [data-animate="from-left"].animate-in {
@@ -98,7 +98,7 @@
 [data-animate="fade"] {
   opacity: 0;
   transform: none;
-  transition: opacity 800ms ease-out;
+  transition: opacity 1000ms ease;
 }
 
 [data-animate="fade"].animate-in {
@@ -110,11 +110,11 @@
    HEARTBEAT SECTION SLOW FADE
    ============================================ */
 
-/* MOTION: Slow fade-in for Heartbeat section (overrides prefers-reduced-motion) */
+/* MOTION: Slow fade-in for Heartbeat section */
 section[data-animate].heartbeat-fade {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1200ms ease-out, transform 1200ms ease-out !important;
+  transform: translateY(10px);
+  transition: opacity 1100ms ease, transform 1100ms ease !important;
 }
 
 section[data-animate].heartbeat-fade.animate-in {
@@ -122,19 +122,35 @@ section[data-animate].heartbeat-fade.animate-in {
   transform: translateY(0);
 }
 
-/* Staggered entrance for card groups */
-[data-animate="stagger-1"] { transition-delay: 0ms; }
-[data-animate="stagger-2"] { transition-delay: 80ms; }
-[data-animate="stagger-3"] { transition-delay: 160ms; }
-[data-animate="stagger-4"] { transition-delay: 240ms; }
-[data-animate="stagger-5"] { transition-delay: 320ms; }
-[data-animate="stagger-6"] { transition-delay: 400ms; }
-[data-animate="stagger-7"] { transition-delay: 60ms; }
-[data-animate="stagger-8"] { transition-delay: 120ms; }
-[data-animate="stagger-9"] { transition-delay: 180ms; }
-[data-animate="stagger-10"] { transition-delay: 240ms; }
-[data-animate="stagger-11"] { transition-delay: 300ms; }
-[data-animate="stagger-12"] { transition-delay: 360ms; }
+/* Staggered entrance — each step is 120ms apart, shared transition speed with base */
+[data-animate="stagger-1"]  { opacity: 0; transform: translateY(10px); transition: opacity 900ms ease, transform 900ms ease; transition-delay: 0ms; }
+[data-animate="stagger-2"]  { opacity: 0; transform: translateY(10px); transition: opacity 900ms ease, transform 900ms ease; transition-delay: 120ms; }
+[data-animate="stagger-3"]  { opacity: 0; transform: translateY(10px); transition: opacity 900ms ease, transform 900ms ease; transition-delay: 240ms; }
+[data-animate="stagger-4"]  { opacity: 0; transform: translateY(10px); transition: opacity 900ms ease, transform 900ms ease; transition-delay: 360ms; }
+[data-animate="stagger-5"]  { opacity: 0; transform: translateY(10px); transition: opacity 900ms ease, transform 900ms ease; transition-delay: 480ms; }
+[data-animate="stagger-6"]  { opacity: 0; transform: translateY(10px); transition: opacity 900ms ease, transform 900ms ease; transition-delay: 600ms; }
+[data-animate="stagger-7"]  { opacity: 0; transform: translateY(10px); transition: opacity 900ms ease, transform 900ms ease; transition-delay: 80ms; }
+[data-animate="stagger-8"]  { opacity: 0; transform: translateY(10px); transition: opacity 900ms ease, transform 900ms ease; transition-delay: 160ms; }
+[data-animate="stagger-9"]  { opacity: 0; transform: translateY(10px); transition: opacity 900ms ease, transform 900ms ease; transition-delay: 240ms; }
+[data-animate="stagger-10"] { opacity: 0; transform: translateY(10px); transition: opacity 900ms ease, transform 900ms ease; transition-delay: 320ms; }
+[data-animate="stagger-11"] { opacity: 0; transform: translateY(10px); transition: opacity 900ms ease, transform 900ms ease; transition-delay: 400ms; }
+[data-animate="stagger-12"] { opacity: 0; transform: translateY(10px); transition: opacity 900ms ease, transform 900ms ease; transition-delay: 480ms; }
+
+[data-animate="stagger-1"].animate-in,
+[data-animate="stagger-2"].animate-in,
+[data-animate="stagger-3"].animate-in,
+[data-animate="stagger-4"].animate-in,
+[data-animate="stagger-5"].animate-in,
+[data-animate="stagger-6"].animate-in,
+[data-animate="stagger-7"].animate-in,
+[data-animate="stagger-8"].animate-in,
+[data-animate="stagger-9"].animate-in,
+[data-animate="stagger-10"].animate-in,
+[data-animate="stagger-11"].animate-in,
+[data-animate="stagger-12"].animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /* ============================================
    HOVER & FOCUS STATES
