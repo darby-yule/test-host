@@ -65,22 +65,19 @@ const submission = {
     <section
       id="contact"
       className="bg-[#f1eee7] relative w-full py-8 md:py-12 lg:py-16 px-4 sm:px-8 md:px-12 lg:px-[80px]"
-      data-animate
     >
       <div className="w-full max-w-7xl mx-auto">
         <div className="flex flex-col gap-8 md:gap-10 lg:gap-[40px] items-center w-full">
-          {/* MOTION: Fade in section header */}
-          <div className="w-full" data-animate>
-            <p className="font-['Neue_Haas_Grotesk_Display_Pro:75_Bold',sans-serif] leading-tight md:leading-normal text-[#8b9544] text-[32px] md:text-[40px] lg:text-[48px] tracking-[1.2px] md:tracking-[1.92px] uppercase">
+          {/* Contact heading */}
+          <div className="w-full">
+            <p className="font-['Neue_Haas_Grotesk_Display_Pro:75_Bold',sans-serif] leading-tight md:leading-normal text-[#8b9544] text-[32px] md:text-[40px] lg:text-[48px] tracking-[1.2px] md:tracking-[1.92px] uppercase" data-animate="from-left">
               Contact
             </p>
           </div>
 
           {/* Contact Form */}
-          {/* MOTION: Fade in contact form */}
           <div
             className="flex flex-col gap-4 md:gap-6 items-start p-4 md:p-6 relative rounded-[8px] w-full max-w-4xl border border-[#ccc]"
-            data-animate
           >
             {/* Name Field */}
             <div className="flex flex-col gap-2 items-start w-full" data-animate="stagger-1">

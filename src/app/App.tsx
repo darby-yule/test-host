@@ -87,12 +87,20 @@ function LandingPage() {
 
     animatedElements.forEach(el => {
       observer.observe(el);
-      // Immediately add animate-in for any element already in view on load
-      const rect = el.getBoundingClientRect();
-      const isInView = rect.top < window.innerHeight && rect.bottom > 0;
-      if (isInView) {
-        el.classList.add('animate-in');
-      }
+    });
+
+    // Double rAF: lets the browser paint opacity:0 first, THEN start the fade.
+    // Without this, elements already in view on load get animate-in before the
+    // initial state is painted, so there's nothing to transition from.
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        animatedElements.forEach(el => {
+          const rect = el.getBoundingClientRect();
+          if (rect.top < window.innerHeight && rect.bottom > 0) {
+            el.classList.add('animate-in');
+          }
+        });
+      });
     });
 
     return () => observer.disconnect();
@@ -222,7 +230,7 @@ function LandingPage() {
 
       {/* Heartbeat Section */}
       {/* MOTION: Fade in heartbeat content */}
-      <section className="min-h-[500px] md:min-h-[700px] lg:min-h-[891px] relative py-12 md:py-16 lg:py-[100px] px-4 sm:px-8 md:px-12 lg:px-16 heartbeat-fade" data-animate>
+      <section className="min-h-[500px] md:min-h-[700px] lg:min-h-[891px] relative py-12 md:py-16 lg:py-[100px] px-4 sm:px-8 md:px-12 lg:px-16">
         <div className="flex flex-col items-center justify-center size-full">
           <div className="w-full max-w-6xl mx-auto flex flex-col items-center justify-center gap-8 md:gap-12">
             {/* Top Line */}
@@ -247,7 +255,7 @@ function LandingPage() {
       </section>
 
       {/* Stories Section - Header on top, cards below (consistent with other sections) */}
-      <section id="stories" className="relative w-full py-8 md:py-12 lg:py-16 px-4 sm:px-8 md:px-12 lg:px-[80px]" data-animate>
+      <section id="stories" className="relative w-full py-8 md:py-12 lg:py-16 px-4 sm:px-8 md:px-12 lg:px-[80px]">
         <div className="w-full max-w-7xl mx-auto">
           <div className="flex flex-col gap-8 md:gap-12 lg:gap-[80px] w-full">
             {/* Section Header */}
@@ -483,7 +491,7 @@ function LandingPage() {
       </section>
 
       {/* Offerings Section */}
-      <section id="offerings" className="relative w-full px-4 sm:px-8 md:px-12 lg:px-[80px]" data-animate>
+      <section id="offerings" className="relative w-full px-4 sm:px-8 md:px-12 lg:px-[80px]">
         <div className="w-full max-w-7xl mx-auto">
           <div className="flex flex-col w-full">
             {[
@@ -540,7 +548,7 @@ function LandingPage() {
 
 
       {/* About Section */}
-      <section id="about" className="bg-[#f1eee7] relative w-full py-8 md:py-12 lg:py-16 px-4 sm:px-8 md:px-12 lg:px-[80px]" data-animate>
+      <section id="about" className="bg-[#f1eee7] relative w-full py-8 md:py-12 lg:py-16 px-4 sm:px-8 md:px-12 lg:px-[80px]">
         <div className="w-full max-w-7xl mx-auto">
           <div className="flex flex-col gap-8 md:gap-12 lg:gap-[80px] w-full">
             {/* MOTION: Slide-in from left for section header */}
@@ -577,7 +585,7 @@ function LandingPage() {
       </section>
 
       {/* Collaborators Section */}
-      <section id="collaborators" className="bg-[#f1eee7] relative w-full py-8 md:py-12 lg:py-16 px-4 sm:px-8 md:px-12 lg:px-[80px]" data-animate>
+      <section id="collaborators" className="bg-[#f1eee7] relative w-full py-8 md:py-12 lg:py-16 px-4 sm:px-8 md:px-12 lg:px-[80px]">
         <div className="w-full max-w-7xl mx-auto">
           <div className="flex flex-col gap-8 md:gap-12 lg:gap-[80px] w-full">
             {/* MOTION: Slide-in from left for section header */}

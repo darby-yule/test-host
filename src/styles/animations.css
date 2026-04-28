@@ -99,19 +99,7 @@
   opacity: 1;
 }
 
-/* ============================================
-   HEARTBEAT SECTION SLOW FADE
-   ============================================ */
-
-/* MOTION: Slow fade-in for Heartbeat section */
-section[data-animate].heartbeat-fade {
-  opacity: 0;
-  transition: opacity 1200ms ease !important;
-}
-
-section[data-animate].heartbeat-fade.animate-in {
-  opacity: 1;
-}
+/* (heartbeat section removed — content elements use stagger-1..4 directly) */
 
 /* Staggered fade-ins */
 [data-animate="stagger-1"]  { opacity: 0; transition: opacity 1000ms ease; transition-delay: 0ms; }
