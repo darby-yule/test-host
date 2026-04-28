@@ -86,16 +86,12 @@ function LandingPage() {
     const animatedElements = document.querySelectorAll('[data-animate]');
 
     animatedElements.forEach(el => {
-
       observer.observe(el);
-      // Only immediately add animate-in class for hero section elements
-      const isHeroElement = el.closest('.hero-section');
-      if (isHeroElement) {
-        const rect = el.getBoundingClientRect();
-        const isInView = rect.top < window.innerHeight && rect.bottom > 0;
-        if (isInView) {
-          el.classList.add('animate-in');
-        }
+      // Immediately add animate-in for any element already in view on load
+      const rect = el.getBoundingClientRect();
+      const isInView = rect.top < window.innerHeight && rect.bottom > 0;
+      if (isInView) {
+        el.classList.add('animate-in');
       }
     });
 
@@ -478,26 +474,26 @@ function LandingPage() {
               {
                 id: 'design-strategy',
                 label: 'Design Strategy',
-                pills: ['UX Research', 'UX Strategy', 'Content Strategy', 'Competitive Research'],
+                pills: ['Creative Strategy', 'UX Research', 'Content Management', 'Competitive Research', 'Content Strategy'],
               },
               {
                 id: 'visuals',
                 label: 'Visuals',
-                pills: ['Brand Design', 'Graphic Design', 'UI Design', 'Website Development'],
+                pills: ['UI Design', 'Social Media Content', 'Web Design', 'Graphic Design', 'Brand Design'],
               },
               {
                 id: 'writing',
                 label: 'Writing',
-                pills: ['Blog Writing', 'Content Writing', 'Content Management'],
+                pills: ['Content Writing', 'Blog Writing', 'Proposal Writing', 'Technical Writing'],
               },
               {
                 id: 'ai',
                 label: 'AI',
-                pills: ['AI Integration'],
+                pills: ['AI Adoption', 'Prompt Engineering', 'AI Tool Development', 'AI Automation', 'Content Design for AI'],
               },
             ].map((service) => (
               <div key={service.id} className="border-t border-[#ccc] last:border-b">
-                <div className="flex flex-col lg:flex-row lg:items-center py-6 md:py-8 lg:py-10 gap-4 lg:gap-[60px]">
+                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between py-6 md:py-8 lg:py-10 gap-4 lg:gap-[60px]">
                   <button
                     className="flex items-center justify-between lg:justify-start gap-4 text-left w-full lg:w-auto lg:flex-shrink-0 group"
                     onClick={() => setActiveService(activeService === service.id ? '' : service.id)}
@@ -511,7 +507,7 @@ function LandingPage() {
                     </svg>
                   </button>
                   {activeService === service.id && (
-                    <div className="flex flex-wrap gap-3 md:gap-4">
+                    <div className="flex flex-wrap gap-3 md:gap-4 lg:justify-end accordion-pills">
                       {service.pills.map((pill) => (
                         <span key={pill} className="bg-[#333] rounded-[10px] px-[20px] py-[10px] font-['Neue_Haas_Grotesk_Display_Pro:55_Roman',sans-serif] text-[#f1eee7] text-[16px] leading-[1.5] tracking-[0.32px]">
                           {pill}

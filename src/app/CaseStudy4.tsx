@@ -1,24 +1,10 @@
 // Authenticity by Design — Violet Night
-import { useState } from 'react';
 import svgPaths from "../imports/svg-buwgyi628p";
-import { ExampleModal } from './components/ExampleModal';
 import useScrollTop from './hooks/useScrollTop';
 import { CaseStudyNav } from './CaseStudyNav';
 
 export default function CaseStudy4() {
   useScrollTop();
-  const [openExample, setOpenExample] = useState<number | null>(null);
-  const totalExamples = 1;
-
-  const handlePrevious = () => {
-    if (openExample === null) return;
-    setOpenExample(openExample === 1 ? totalExamples : openExample - 1);
-  };
-
-  const handleNext = () => {
-    if (openExample === null) return;
-    setOpenExample(openExample === totalExamples ? 1 : openExample + 1);
-  };
 
   return (
     <div className="bg-[#f1eee7] relative min-h-screen w-full">
@@ -33,17 +19,16 @@ export default function CaseStudy4() {
         </svg>
       </button>
 
-      {/* CASE STUDY: Hero Image */}
-      <div className="w-full h-screen aspect-[5/7] md:aspect-auto md:h-[600px] lg:h-[811px] relative overflow-hidden">
+      {/* CASE STUDY: Hero Section */}
+      <div className="w-full h-screen md:h-[600px] lg:h-[811px] relative">
         <img
           alt=""
-          className="w-full h-[50%] md:h-full object-cover object-center"
+          className="absolute inset-0 w-full h-full object-cover object-center"
           src="/wp-content/2025/12/Authenticity-Hero16-9.webp"
         />
-      </div>
 
-      {/* CASE STUDY: Title Card */}
-      <div className="absolute left-0 top-[300px] md:top-[400px] lg:top-[645px] bg-[#f1eee7] rounded-tr-[10px] px-[20px] md:px-[30px] lg:px-[40px] py-[20px] md:py-[24px] max-w-full md:max-w-[90%] lg:max-w-none">
+        {/* CASE STUDY: Title Card */}
+        <div className="absolute left-0 bottom-0 md:bottom-auto md:top-[400px] lg:top-[645px] bg-[#f1eee7] rounded-tr-[10px] px-[20px] md:px-[30px] lg:px-[40px] py-[20px] md:py-[24px] max-w-full md:max-w-[90%] lg:max-w-none">
         <div className="flex flex-col gap-[16px] md:gap-[20px] lg:gap-[24px]">
           {/* CASE STUDY: Main Title */}
           <h1 className="font-['Neue_Haas_Grotesk_Display_Pro:95_Black',sans-serif] text-[#222021] text-[32px] md:text-[48px] lg:text-[64px] leading-[1.1] lg:leading-[55px] tracking-[-1.5px] lg:tracking-[-2.56px] uppercase">
@@ -94,6 +79,7 @@ export default function CaseStudy4() {
           </div>
         </div>
       </div>
+      </div>
 
       <CaseStudyNav />
 
@@ -125,7 +111,7 @@ export default function CaseStudy4() {
                         <path d={svgPaths.p1c8006f1} fill="#39FF14" />
                       </svg>
                       <p className="font-['Neue_Haas_Grotesk_Display_Pro:55_Roman',sans-serif] text-[#39ff14] text-[14px] md:text-[16px] leading-[32px] tracking-[0.64px]">
-                        Across Instagram, TikTok & YouTube
+                        Instagram, TikTok & Youtube
                       </p>
                     </div>
                   </div>
@@ -140,7 +126,7 @@ export default function CaseStudy4() {
               >
                 <div className="flex flex-col gap-[24px]">
                   <p className="font-['Neue_Haas_Grotesk_Display_Pro:55_Roman',sans-serif] text-[#f1eee7] text-[16px] leading-[32px] tracking-[0.64px]">
-                    Off-Season Reach
+                    Tour-Level Numbers
                   </p>
                   <div className="flex flex-col md:flex-row gap-[12px] md:gap-[24px] items-start md:items-end">
                     <p className="font-['Neue_Haas_Grotesk_Display_Pro:96_Black_Italic',sans-serif] italic text-[#39ff14] text-[36px] md:text-[48px] leading-[1] tracking-[-0.96px] uppercase">
@@ -151,7 +137,7 @@ export default function CaseStudy4() {
                         <path d={svgPaths.p1c8006f1} fill="#39FF14" />
                       </svg>
                       <p className="font-['Neue_Haas_Grotesk_Display_Pro:55_Roman',sans-serif] text-[#39ff14] text-[14px] md:text-[16px] leading-[32px] tracking-[0.64px]">
-                        At Tour Level
+                        During Off-Season
                       </p>
                     </div>
                   </div>
@@ -296,16 +282,18 @@ export default function CaseStudy4() {
           <div className="max-w-[770px] mx-auto lg:ml-[calc(25%+58px)] grid grid-cols-1 gap-[30px] md:gap-[40px]">
             {/* Example 1 */}
             <div className="flex flex-col gap-[16px] items-center">
-              <button
-                onClick={() => setOpenExample(1)}
-                className="w-full rounded-[9.322px] overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+              <a
+                href="https://www.instagram.com/p/DXX7RdsD-oC/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full rounded-[9.322px] overflow-hidden cursor-pointer hover:opacity-90 transition-opacity block"
               >
                 <img
                   alt="Authenticity by Design"
                   className="w-full h-auto object-cover"
                   src="/wp-content/2025/12/Authenticity-Example.webp"
                 />
-              </button>
+              </a>
               <p className="font-['Neue_Haas_Grotesk_Display_Pro:55_Roman',sans-serif] text-[#333] text-[14px] md:text-[16px] leading-[32px] tracking-[0.64px] text-center">
                 Authenticity by Design
               </p>
@@ -314,11 +302,8 @@ export default function CaseStudy4() {
         </section>
 
         {/* CASE STUDY: CTA */}
-        <div className="flex flex-col items-center gap-[24px] pb-[80px] md:pb-[100px]">
-          <p className="font-['Neue_Haas_Grotesk_Display_Pro:65_Medium',sans-serif] text-[#333] text-[18px] md:text-[20px] leading-[32px] tracking-[0.4px] text-center">
-            Getting attention but not converting it? Let's talk.
-          </p>
-          <button className="bg-[#f1eee7] border-[5px] border-[#8b9544] rounded-[5px] px-[16px] py-[8px] h-[54px] flex items-center gap-[12px] hover:bg-[#8b9544] hover:text-[#f1eee7] transition-colors group">
+        <div className="flex justify-center pb-[80px] md:pb-[100px]">
+          <a href="/#contact" className="bg-[#f1eee7] border-[5px] border-[#8b9544] rounded-[5px] px-[16px] py-[8px] h-[54px] flex items-center gap-[12px] hover:bg-[#8b9544] hover:text-[#f1eee7] transition-colors group">
             <svg className="size-[24px]" fill="none" viewBox="0 0 24 24">
               <path d="M6 17L11 12L6 7" stroke="#8B9544" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.25" className="group-hover:stroke-[#f1eee7]" />
               <path d="M13 17L18 12L13 7" stroke="#8B9544" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.25" className="group-hover:stroke-[#f1eee7]" />
@@ -326,7 +311,7 @@ export default function CaseStudy4() {
             <span className="font-['Neue_Haas_Grotesk_Display_Pro:65_Medium',sans-serif] text-[#8b9544] text-[20px] leading-[normal] tracking-[0.4px] group-hover:text-[#f1eee7]">
               Let's Talk
             </span>
-          </button>
+          </a>
         </div>
 
         {/* CASE STUDY: Pagination */}
@@ -351,21 +336,6 @@ export default function CaseStudy4() {
         </div>
       </div>
 
-      {/* POPUP: Example Modal */}
-      <ExampleModal
-        isOpen={openExample !== null}
-        onClose={() => setOpenExample(null)}
-        onPrevious={handlePrevious}
-        onNext={handleNext}
-      >
-        {openExample === 1 && (
-          <img
-            alt="Authenticity by Design"
-            className="w-full h-auto rounded-[10px]"
-            src="/wp-content/2025/12/Authenticity-Example.webp"
-          />
-        )}
-      </ExampleModal>
     </div>
   );
 }

@@ -58,18 +58,16 @@ export default function CaseStudy2() {
         </svg>
       </button>
 
-      {/* CASE STUDY: Hero Image */}
-      {/* FIX: Mobile hero image set to 5:7 aspect ratio and full viewport height */}
-      <div className="w-full h-screen aspect-[5/7] md:aspect-auto md:h-[600px] lg:h-[811px] relative overflow-hidden">
-        <img 
-          alt="" 
-          className="w-full h-[50%] md:h-full object-cover object-center" 
-          src="/wp-content/2025/12/Pantegral-Case-Study-HERO.webp" 
+      {/* CASE STUDY: Hero Section */}
+      <div className="w-full h-screen md:h-[600px] lg:h-[811px] relative">
+        <img
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover object-center"
+          src="/wp-content/2025/12/Pantegral-Case-Study-HERO.webp"
         />
-      </div>
 
-      {/* CASE STUDY: Title Card */}
-      <div className="absolute left-0 top-[400px] md:top-[400px] lg:top-[645px] bg-[#f1eee7] rounded-tr-[10px] px-[20px] md:px-[30px] lg:px-[40px] py-[20px] md:py-[24px] max-w-full md:max-w-[90%] lg:max-w-none">
+        {/* CASE STUDY: Title Card */}
+        <div className="absolute left-0 bottom-0 md:bottom-auto md:top-[400px] lg:top-[645px] bg-[#f1eee7] rounded-tr-[10px] px-[20px] md:px-[30px] lg:px-[40px] py-[20px] md:py-[24px] max-w-full md:max-w-[90%] lg:max-w-none">
         <div className="flex flex-col gap-[16px] md:gap-[20px] lg:gap-[24px]">
           {/* CASE STUDY: Main Title */}
           <h1 className="font-['Neue_Haas_Grotesk_Display_Pro:95_Black',sans-serif] text-[#222021] text-[32px] md:text-[48px] lg:text-[64px] leading-[1.1] lg:leading-[55px] tracking-[-1.5px] lg:tracking-[-2.56px] uppercase">
@@ -100,6 +98,7 @@ export default function CaseStudy2() {
             </div>
           </div>
         </div>
+      </div>
       </div>
 <CaseStudyNav/>
       {/* Content Container */}
@@ -352,7 +351,7 @@ export default function CaseStudy2() {
 
         {/* CASE STUDY: CTA Button */}
         <div className="flex justify-center pb-[80px] md:pb-[100px]">
-          <button className="bg-[#f1eee7] border-[5px] border-[#8b9544] rounded-[5px] px-[16px] py-[8px] h-[54px] flex items-center gap-[12px] hover:bg-[#8b9544] hover:text-[#f1eee7] transition-colors group">
+          <a href="/#contact" className="bg-[#f1eee7] border-[5px] border-[#8b9544] rounded-[5px] px-[16px] py-[8px] h-[54px] flex items-center gap-[12px] hover:bg-[#8b9544] hover:text-[#f1eee7] transition-colors group">
             <svg className="size-[24px]" fill="none" viewBox="0 0 24 24">
               <path d="M6 17L11 12L6 7" stroke="#8B9544" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.25" className="group-hover:stroke-[#f1eee7]" />
               <path d="M13 17L18 12L13 7" stroke="#8B9544" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.25" className="group-hover:stroke-[#f1eee7]" />
@@ -360,7 +359,7 @@ export default function CaseStudy2() {
             <span className="font-['Neue_Haas_Grotesk_Display_Pro:65_Medium',sans-serif] text-[#8b9544] text-[20px] leading-[normal] tracking-[0.4px] group-hover:text-[#f1eee7]">
               Let's Talk
             </span>
-          </button>
+          </a>
         </div>
 
         {/* CASE STUDY: Pagination */}
