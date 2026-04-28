@@ -87,20 +87,11 @@ function LandingPage() {
 
     animatedElements.forEach(el => {
       observer.observe(el);
-    });
-
-    // Double rAF: lets the browser paint opacity:0 first, THEN start the fade.
-    // Without this, elements already in view on load get animate-in before the
-    // initial state is painted, so there's nothing to transition from.
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        animatedElements.forEach(el => {
-          const rect = el.getBoundingClientRect();
-          if (rect.top < window.innerHeight && rect.bottom > 0) {
-            el.classList.add('animate-in');
-          }
-        });
-      });
+      // For elements already in the viewport on load, trigger immediately
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        el.classList.add('animate-in');
+      }
     });
 
     return () => observer.disconnect();

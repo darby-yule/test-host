@@ -69,75 +69,67 @@
    ENTRANCE ANIMATIONS (On Scroll)
    ============================================ */
 
-/* Base state: invisible + very subtle lift */
-[data-animate] {
-  opacity: 0;
-  transform: translateY(14px);
-  transition: opacity 900ms ease, transform 900ms ease;
+/* Keyframes — same pattern as the existing hero image animations above */
+@keyframes scrollFadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes scrollFadeLeft {
+  from { opacity: 0; transform: translateX(-16px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes scrollFade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Hidden until animate-in is added by the IntersectionObserver */
+[data-animate],
+[data-animate="from-left"],
+[data-animate="fade"],
+[data-animate="stagger-1"],
+[data-animate="stagger-2"],
+[data-animate="stagger-3"],
+[data-animate="stagger-4"],
+[data-animate="stagger-5"],
+[data-animate="stagger-6"],
+[data-animate="stagger-7"],
+[data-animate="stagger-8"],
+[data-animate="stagger-9"],
+[data-animate="stagger-10"],
+[data-animate="stagger-11"],
+[data-animate="stagger-12"] {
+  opacity: 0;
+}
+
+/* When animate-in is added, play the appropriate keyframe animation */
 [data-animate].animate-in {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Section headings slide in gently from the left */
-[data-animate="from-left"] {
-  opacity: 0;
-  transform: translateX(-16px);
-  transition: opacity 900ms ease, transform 900ms ease;
+  animation: scrollFadeUp 800ms ease forwards;
 }
 
 [data-animate="from-left"].animate-in {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-/* Images / large blocks — fade only, no positional shift */
-[data-animate="fade"] {
-  opacity: 0;
-  transform: none;
-  transition: opacity 1000ms ease;
+  animation: scrollFadeLeft 800ms ease forwards;
 }
 
 [data-animate="fade"].animate-in {
-  opacity: 1;
-  transform: none;
+  animation: scrollFade 900ms ease forwards;
 }
 
-/* (heartbeat section removed — content elements use stagger-1..4 directly) */
-
-/* Staggered: lift + fade, each step 120 ms apart */
-/* stagger-1..6 are used for cards, form fields, heartbeat elements (sequential) */
-/* stagger-7..12 are used for logos (within-row grouping, shorter gaps) */
-[data-animate="stagger-1"]  { opacity: 0; transform: translateY(14px); transition: opacity 900ms ease, transform 900ms ease; transition-delay: 0ms; }
-[data-animate="stagger-2"]  { opacity: 0; transform: translateY(14px); transition: opacity 900ms ease, transform 900ms ease; transition-delay: 120ms; }
-[data-animate="stagger-3"]  { opacity: 0; transform: translateY(14px); transition: opacity 900ms ease, transform 900ms ease; transition-delay: 240ms; }
-[data-animate="stagger-4"]  { opacity: 0; transform: translateY(14px); transition: opacity 900ms ease, transform 900ms ease; transition-delay: 360ms; }
-[data-animate="stagger-5"]  { opacity: 0; transform: translateY(14px); transition: opacity 900ms ease, transform 900ms ease; transition-delay: 480ms; }
-[data-animate="stagger-6"]  { opacity: 0; transform: translateY(14px); transition: opacity 900ms ease, transform 900ms ease; transition-delay: 600ms; }
-[data-animate="stagger-7"]  { opacity: 0; transform: translateY(14px); transition: opacity 900ms ease, transform 900ms ease; transition-delay: 80ms; }
-[data-animate="stagger-8"]  { opacity: 0; transform: translateY(14px); transition: opacity 900ms ease, transform 900ms ease; transition-delay: 160ms; }
-[data-animate="stagger-9"]  { opacity: 0; transform: translateY(14px); transition: opacity 900ms ease, transform 900ms ease; transition-delay: 240ms; }
-[data-animate="stagger-10"] { opacity: 0; transform: translateY(14px); transition: opacity 900ms ease, transform 900ms ease; transition-delay: 320ms; }
-[data-animate="stagger-11"] { opacity: 0; transform: translateY(14px); transition: opacity 900ms ease, transform 900ms ease; transition-delay: 400ms; }
-[data-animate="stagger-12"] { opacity: 0; transform: translateY(14px); transition: opacity 900ms ease, transform 900ms ease; transition-delay: 480ms; }
-
-[data-animate="stagger-1"].animate-in,
-[data-animate="stagger-2"].animate-in,
-[data-animate="stagger-3"].animate-in,
-[data-animate="stagger-4"].animate-in,
-[data-animate="stagger-5"].animate-in,
-[data-animate="stagger-6"].animate-in,
-[data-animate="stagger-7"].animate-in,
-[data-animate="stagger-8"].animate-in,
-[data-animate="stagger-9"].animate-in,
-[data-animate="stagger-10"].animate-in,
-[data-animate="stagger-11"].animate-in,
-[data-animate="stagger-12"].animate-in {
-  opacity: 1;
-  transform: translateY(0);
-}
+/* Staggered: same lift-fade, delayed per item */
+[data-animate="stagger-1"].animate-in  { animation: scrollFadeUp 800ms ease forwards; animation-delay: 0ms; }
+[data-animate="stagger-2"].animate-in  { animation: scrollFadeUp 800ms ease forwards; animation-delay: 100ms; }
+[data-animate="stagger-3"].animate-in  { animation: scrollFadeUp 800ms ease forwards; animation-delay: 200ms; }
+[data-animate="stagger-4"].animate-in  { animation: scrollFadeUp 800ms ease forwards; animation-delay: 300ms; }
+[data-animate="stagger-5"].animate-in  { animation: scrollFadeUp 800ms ease forwards; animation-delay: 400ms; }
+[data-animate="stagger-6"].animate-in  { animation: scrollFadeUp 800ms ease forwards; animation-delay: 500ms; }
+[data-animate="stagger-7"].animate-in  { animation: scrollFadeUp 800ms ease forwards; animation-delay: 60ms; }
+[data-animate="stagger-8"].animate-in  { animation: scrollFadeUp 800ms ease forwards; animation-delay: 120ms; }
+[data-animate="stagger-9"].animate-in  { animation: scrollFadeUp 800ms ease forwards; animation-delay: 180ms; }
+[data-animate="stagger-10"].animate-in { animation: scrollFadeUp 800ms ease forwards; animation-delay: 240ms; }
+[data-animate="stagger-11"].animate-in { animation: scrollFadeUp 800ms ease forwards; animation-delay: 300ms; }
+[data-animate="stagger-12"].animate-in { animation: scrollFadeUp 800ms ease forwards; animation-delay: 360ms; }
 
 /* ============================================
    HOVER & FOCUS STATES
