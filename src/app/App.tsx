@@ -541,7 +541,7 @@ function LandingPage() {
             
             {/* About Content */}
             {/* MOTION: Staggered entrance for about content */}
-            <div className="flex flex-col lg:flex-row gap-8 md:gap-12 lg:gap-[80px] items-start w-full">
+            <div className="flex flex-col lg:flex-row gap-8 md:gap-12 lg:gap-[80px] items-center w-full">
               {/* Photo */}
               {/* CHANGE 2: Width constraint - max 429px */}
               <div className="w-full lg:w-auto flex-shrink-0" data-animate="fade">
