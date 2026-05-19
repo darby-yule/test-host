@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import svgPaths from "../imports/svg-h2m55t9jbc";
 import svgPathsFooter from "../imports/svg-ro01cix2zi";
 import { INIT_ANALYTICS } from './analytics';
+import DYCS_About from '../assets/DYCS-About.webp';
 // ASSET REPLACED: Hero images
 const imgHero31 = "/wp-content/2025/12/Hero3-v2.webp";
 const imgHeroV21 = "/wp-content/2025/12/Hero-v2.webp";
@@ -15,8 +16,7 @@ const imgFrame47 = "/wp-content/2025/12/c78d59df8eded3238410432d7c04b50cfa4ed464
 const imgAuthenticity = "/wp-content/2025/12/Authenticity-Card.webp";
 const imgDemoReel = "/wp-content/2025/12/DemoReel-Card.webp";
 const imgDontManage = "/wp-content/2025/12/DontManage-Card.webp";
-// ASSET REPLACED: About section image
-const imgDarbyBio21 = "/wp-content/2025/12/Darby-Bio2-Multiply.webp";
+// ASSET REPLACED: About section image (now imported above)
 // ASSET REPLACED: Collaborators logos
 const imgLogo13 = "/wp-content/2025/11/Logo3.webp";
 const imgLogo21 = "/wp-content/2025/11/Logo4.webp";
@@ -545,7 +545,7 @@ function LandingPage() {
               {/* Photo */}
               {/* CHANGE 2: Width constraint - max 429px */}
               <div className="w-full lg:w-auto flex-shrink-0" data-animate="fade">
-                <img alt="" src={imgDarbyBio21} className="max-w-[429px] w-full h-auto" />
+                <img alt="" src={DYCS_About} className="max-w-[429px] w-full h-auto" />
               </div>
               
               {/* Bio Text */}
