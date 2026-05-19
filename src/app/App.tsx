@@ -544,12 +544,12 @@ function LandingPage() {
             <div className="flex flex-col lg:flex-row gap-8 md:gap-12 lg:gap-[80px] items-center w-full">
               {/* Photo */}
               {/* CHANGE 2: Width constraint - max 429px */}
-              <div className="w-full lg:w-auto flex-shrink-0" data-animate="fade">
-                <img alt="" src={DYCS_About} className="max-w-[429px] w-full h-auto" />
+              <div className="w-full lg:w-1/2 flex-shrink-0" data-animate="fade">
+                <img alt="" src={DYCS_About} className="w-full h-auto" />
               </div>
-              
+
               {/* Bio Text */}
-              <div className="flex flex-col gap-6 md:gap-8 flex-1" data-animate="stagger-2">
+              <div className="flex flex-col gap-6 md:gap-8 w-full lg:w-1/2" data-animate="stagger-2">
                 <div className="flex flex-col gap-4 md:gap-6">
                   {/* CHANGE 4: Updated About text as specified */}
                   <p className="font-['Neue_Haas_Grotesk_Display_Pro:55_Roman',sans-serif] leading-[26px] md:leading-[28px] lg:leading-[32px] text-[#555] text-[14px] md:text-[16px] lg:text-[18px] tracking-[0.32px]">
