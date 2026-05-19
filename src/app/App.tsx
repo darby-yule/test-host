@@ -258,8 +258,42 @@ function LandingPage() {
             {/* Case Study Cards */}
             {/* MOTION: Staggered entrance for story cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-[40px]">
-              {/* Card 1 — Authenticity by Design */}
-              <Link to="/case-study/authenticity" className="flex flex-col items-center px-4 py-8 md:py-[40px] relative rounded-[10px] min-h-[400px] md:min-h-[511px] card-hover" data-animate="stagger-1">
+              {/* Card 1 — The Cost of Competing With Yourself */}
+              <Link to="/case-study/kinvest" className="flex flex-col items-center px-4 py-8 md:py-[40px] relative rounded-[10px] min-h-[400px] md:min-h-[511px] card-hover" data-animate="stagger-1">
+                <div aria-hidden="true" className="absolute inset-0 pointer-events-none rounded-[10px]">
+                  <img alt="" className="absolute w-full h-full object-cover rounded-[10px]" src={imgFrame50} />
+                  <div className="absolute bg-gradient-to-b from-[#000000] from-[18.75%] inset-0 rounded-[10px] to-[rgba(0,0,0,0)]" />
+                </div>
+                <div aria-hidden="true" className="absolute border-[#818380] border-4 md:border-[6px] border-solid inset-[-4px] md:inset-[-6px] pointer-events-none rounded-[14px] md:rounded-[16px]" />
+                <div className="flex flex-col h-full items-end justify-between relative z-10 w-full">
+                  <div className="flex items-start w-full">
+                    <p className="font-['Neue_Haas_Grotesk_Display_Pro:96_Black_Italic',sans-serif] italic leading-tight text-[#e1c78f] text-[32px] md:text-[40px] lg:text-[48px] tracking-[-0.96px] uppercase">The Cost of Competing With Yourself</p>
+                  </div>
+                  <div className="flex gap-3 md:gap-[16px] items-start justify-end flex-wrap">
+                    <div className="bg-[#555] relative rounded-[10px]">
+                      <div className="flex gap-2 items-center justify-center px-3 md:px-[16px] py-2 md:py-[8px] rounded-[inherit]">
+                        <div className="w-4 h-4 flex items-center justify-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 48 48" className="w-full h-full"><g fill="none" stroke="#F1EEE7" strokeLinecap="round" strokeLinejoin="round" strokeWidth="4"><path d="M24 10a3 3 0 1 0 0-6a3 3 0 0 0 0 6m0 34a3 3 0 1 0 0-6a3 3 0 0 0 0 6M7 27a3 3 0 1 0 0-6a3 3 0 0 0 0 6m34 0a3 3 0 1 0 0-6a3 3 0 0 0 0 6"/><path d="M24.197 15.744a8.99 8.99 0 0 0 7.438-3.931a14.5 14.5 0 0 1 4.686 4.498A9 9 0 0 0 32 24a9 9 0 0 0 4.527 7.811a14.5 14.5 0 0 1-4.426 4.532a9 9 0 0 0-7.905-4.694c-3.4 0-6.36 1.885-7.89 4.668a14.5 14.5 0 0 1-4.494-4.683a8.99 8.99 0 0 0 3.93-7.438a8.99 8.99 0 0 0-3.907-7.422a14.5 14.5 0 0 1 4.94-4.938a8.99 8.99 0 0 0 7.42 3.907"/></g></svg>
+                        </div>
+                        <p className="font-['Neue_Haas_Grotesk_Display_Pro:55_Roman',sans-serif] leading-[28px] md:leading-[32px] text-[#f1eee7] text-[14px] md:text-[16px] whitespace-nowrap tracking-[0.64px]">UX</p>
+                      </div>
+                      <div aria-hidden="true" className="absolute border-[#ccc] border-[2px] md:border-[3px] border-solid inset-0 pointer-events-none rounded-[10px]" />
+                    </div>
+                    <div className="bg-[#555] relative rounded-[10px]">
+                      <div className="flex gap-2 items-center justify-center px-3 md:px-[16px] py-2 md:py-[8px] rounded-[inherit]">
+                        <div className="w-4 h-4 flex items-center justify-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 48 48" className="w-full h-full"><g fill="none" stroke="#F1EEE7" strokeLinejoin="round" strokeWidth="4"><path d="M24 44c11.046 0 20-8.954 20-20S35.046 4 24 4S4 12.954 4 24s8.954 20 20 20Z"/><path d="M24 44c7.732 0 14-6.268 14-14s-6.268-14-14-14s-14 6.268-14 14s6.268 14 14 14Z"/><path d="M24 44a8 8 0 1 0 0-16a8 8 0 0 0 0 16Z"/></g></svg>
+                        </div>
+                        <p className="font-['Neue_Haas_Grotesk_Display_Pro:55_Roman',sans-serif] leading-[28px] md:leading-[32px] text-[#f1eee7] text-[14px] md:text-[16px] text-center whitespace-nowrap tracking-[0.64px]">Research</p>
+                      </div>
+                      <div aria-hidden="true" className="absolute border-[#ccc] border-[2px] md:border-[3px] border-solid inset-0 pointer-events-none rounded-[10px]" />
+                    </div>
+                  </div>
+                </div>
+              </Link>
+
+              {/* Card 2 — Authenticity by Design */}
+              <Link to="/case-study/authenticity" className="flex flex-col items-center px-4 py-8 md:py-[40px] relative rounded-[10px] min-h-[400px] md:min-h-[511px] card-hover" data-animate="stagger-2">
                 <div aria-hidden="true" className="absolute inset-0 pointer-events-none rounded-[10px]">
                   <img alt="" className="absolute w-full h-full object-cover rounded-[10px]" src={imgAuthenticity} />
                   <div className="absolute bg-gradient-to-b from-[#000000] from-[18.75%] inset-0 rounded-[10px] to-[rgba(0,0,0,0)]" />
@@ -301,8 +335,42 @@ function LandingPage() {
                 </div>
               </Link>
 
-              {/* Card 2 — DYCS 2026 Demo Reel */}
-              <Link to="/case-study/demo-reel" className="flex flex-col items-center px-4 py-8 md:py-[40px] relative rounded-[10px] min-h-[400px] md:min-h-[511px] card-hover" data-animate="stagger-2">
+              {/* Card 3 — The Amazing Thing You Can't Explain */}
+              <Link to="/case-study/pantegral" className="flex flex-col items-center px-4 py-8 md:py-[40px] relative rounded-[10px] min-h-[400px] md:min-h-[511px] card-hover" data-animate="stagger-3">
+                <div aria-hidden="true" className="absolute inset-0 pointer-events-none rounded-[10px]">
+                  <img alt="" className="absolute w-full h-full object-cover rounded-[10px]" src={imgFrame49} />
+                  <div className="absolute bg-gradient-to-b from-[#000000] from-[18.75%] inset-0 rounded-[10px] to-[rgba(0,0,0,0)]" />
+                </div>
+                <div aria-hidden="true" className="absolute border-[#818380] border-4 md:border-[6px] border-solid inset-[-4px] md:inset-[-6px] pointer-events-none rounded-[14px] md:rounded-[16px]" />
+                <div className="flex flex-col h-full items-end justify-between relative z-10 w-full">
+                  <div className="flex items-start w-full">
+                    <p className="font-['Neue_Haas_Grotesk_Display_Pro:96_Black_Italic',sans-serif] italic leading-tight text-[#e1c78f] text-[32px] md:text-[40px] lg:text-[48px] tracking-[-0.96px] uppercase">The Amazing Thing You Can't Explain</p>
+                  </div>
+                  <div className="flex gap-3 md:gap-[16px] items-start justify-end flex-wrap">
+                    <div className="bg-[#555] relative rounded-[10px]">
+                      <div className="flex gap-2 items-center justify-center px-3 md:px-[16px] py-2 md:py-[8px] rounded-[inherit]">
+                        <div className="w-4 h-4 flex items-center justify-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 48 48" className="w-full h-full"><g fill="none" stroke="#F1EEE7" strokeLinejoin="round" strokeWidth="4"><path d="M19 32c-7.732 0-14-6.268-14-14S11.268 4 19 4s14 6.268 14 14"/><path d="M44 18H18v26h26z"/></g></svg>
+                        </div>
+                        <p className="font-['Neue_Haas_Grotesk_Display_Pro:55_Roman',sans-serif] leading-[28px] md:leading-[32px] text-[#f1eee7] text-[14px] md:text-[16px] text-center whitespace-nowrap tracking-[0.64px]">Content</p>
+                      </div>
+                      <div aria-hidden="true" className="absolute border-[#ccc] border-[2px] md:border-[3px] border-solid inset-0 pointer-events-none rounded-[10px]" />
+                    </div>
+                    <div className="bg-[#555] relative rounded-[10px]">
+                      <div className="flex gap-2 items-center justify-center px-3 md:px-[16px] py-2 md:py-[8px] rounded-[inherit]">
+                        <div className="w-4 h-4 flex items-center justify-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 48 48" className="w-full h-full"><g fill="none" stroke="#F1EEE7" strokeLinejoin="round" strokeWidth="4"><rect width="36" height="20" x="6" y="6" rx="2"/><path strokeLinecap="round" d="M14 13h8m-8 6h20M8 44l4.889-6h21.778L40 44M24 26v18"/></g></svg>
+                        </div>
+                        <p className="font-['Neue_Haas_Grotesk_Display_Pro:55_Roman',sans-serif] leading-[28px] md:leading-[32px] text-[#f1eee7] text-[14px] md:text-[16px] text-center whitespace-nowrap tracking-[0.64px]">Writing</p>
+                      </div>
+                      <div aria-hidden="true" className="absolute border-[#ccc] border-[2px] md:border-[3px] border-solid inset-0 pointer-events-none rounded-[10px]" />
+                    </div>
+                  </div>
+                </div>
+              </Link>
+
+              {/* Card 4 — DYCS 2026 Demo Reel */}
+              <Link to="/case-study/demo-reel" className="flex flex-col items-center px-4 py-8 md:py-[40px] relative rounded-[10px] min-h-[400px] md:min-h-[511px] card-hover" data-animate="stagger-4">
                 <div aria-hidden="true" className="absolute inset-0 pointer-events-none rounded-[10px]">
                   <img alt="" className="absolute w-full h-full object-cover rounded-[10px]" src={imgDemoReel} />
                   <div className="absolute bg-gradient-to-b from-[#000000] from-[18.75%] inset-0 rounded-[10px] to-[rgba(0,0,0,0)]" />
@@ -335,8 +403,8 @@ function LandingPage() {
                 </div>
               </Link>
 
-              {/* Card 3 — Don't Manage, Do Your Real Work */}
-              <Link to="/case-study/dont-manage" className="flex flex-col items-center px-4 py-8 md:py-[40px] relative rounded-[10px] min-h-[400px] md:min-h-[511px] card-hover" data-animate="stagger-3">
+              {/* Card 5 — Don't Manage, Do Your Real Work */}
+              <Link to="/case-study/dont-manage" className="flex flex-col items-center px-4 py-8 md:py-[40px] relative rounded-[10px] min-h-[400px] md:min-h-[511px] card-hover" data-animate="stagger-5">
                 <div aria-hidden="true" className="absolute inset-0 pointer-events-none rounded-[10px]">
                   <img alt="" className="absolute w-full h-full object-cover rounded-[10px]" src={imgDontManage} />
                   <div className="absolute bg-gradient-to-b from-[#000000] from-[18.75%] inset-0 rounded-[10px] to-[rgba(0,0,0,0)]" />
@@ -369,78 +437,6 @@ function LandingPage() {
                 </div>
               </Link>
 
-              {/* Card 4 — The Cost of Competing With Yourself */}
-              <Link to="/case-study/kinvest" className="flex flex-col items-center px-4 py-8 md:py-[40px] relative rounded-[10px] min-h-[400px] md:min-h-[511px] card-hover" data-animate="stagger-4">
-                <div aria-hidden="true" className="absolute inset-0 pointer-events-none rounded-[10px]">
-                  <img alt="" className="absolute w-full h-full object-cover rounded-[10px]" src={imgFrame50} />
-                  <div className="absolute bg-gradient-to-b from-[#000000] from-[18.75%] inset-0 rounded-[10px] to-[rgba(0,0,0,0)]" />
-                </div>
-                <div aria-hidden="true" className="absolute border-[#818380] border-4 md:border-[6px] border-solid inset-[-4px] md:inset-[-6px] pointer-events-none rounded-[14px] md:rounded-[16px]" />
-                <div className="flex flex-col h-full items-end justify-between relative z-10 w-full">
-                  <div className="flex items-start w-full">
-                    <p className="font-['Neue_Haas_Grotesk_Display_Pro:96_Black_Italic',sans-serif] italic leading-tight text-[#e1c78f] text-[32px] md:text-[40px] lg:text-[48px] tracking-[-0.96px] uppercase">The Cost of Competing With Yourself</p>
-                  </div>
-                  <div className="flex gap-3 md:gap-[16px] items-start justify-end flex-wrap">
-                    <div className="bg-[#555] relative rounded-[10px]">
-                      <div className="flex gap-2 items-center justify-center px-3 md:px-[16px] py-2 md:py-[8px] rounded-[inherit]">
-                        {/* ASSET REPLACED: UX icon */}
-                        <div className="w-4 h-4 flex items-center justify-center">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 48 48" className="w-full h-full"><g fill="none" stroke="#F1EEE7" strokeLinecap="round" strokeLinejoin="round" strokeWidth="4"><path d="M24 10a3 3 0 1 0 0-6a3 3 0 0 0 0 6m0 34a3 3 0 1 0 0-6a3 3 0 0 0 0 6M7 27a3 3 0 1 0 0-6a3 3 0 0 0 0 6m34 0a3 3 0 1 0 0-6a3 3 0 0 0 0 6"/><path d="M24.197 15.744a8.99 8.99 0 0 0 7.438-3.931a14.5 14.5 0 0 1 4.686 4.498A9 9 0 0 0 32 24a9 9 0 0 0 4.527 7.811a14.5 14.5 0 0 1-4.426 4.532a9 9 0 0 0-7.905-4.694c-3.4 0-6.36 1.885-7.89 4.668a14.5 14.5 0 0 1-4.494-4.683a8.99 8.99 0 0 0 3.93-7.438a8.99 8.99 0 0 0-3.907-7.422a14.5 14.5 0 0 1 4.94-4.938a8.99 8.99 0 0 0 7.42 3.907"/></g></svg>
-                        </div>
-                        <p className="font-['Neue_Haas_Grotesk_Display_Pro:55_Roman',sans-serif] leading-[28px] md:leading-[32px] text-[#f1eee7] text-[14px] md:text-[16px] whitespace-nowrap tracking-[0.64px]">UX</p>
-                      </div>
-                      <div aria-hidden="true" className="absolute border-[#ccc] border-[2px] md:border-[3px] border-solid inset-0 pointer-events-none rounded-[10px]" />
-                    </div>
-                    <div className="bg-[#555] relative rounded-[10px]">
-                      <div className="flex gap-2 items-center justify-center px-3 md:px-[16px] py-2 md:py-[8px] rounded-[inherit]">
-                        {/* ASSET REPLACED: Research icon */}
-                        <div className="w-4 h-4 flex items-center justify-center">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 48 48" className="w-full h-full"><g fill="none" stroke="#F1EEE7" strokeLinejoin="round" strokeWidth="4"><path d="M24 44c11.046 0 20-8.954 20-20S35.046 4 24 4S4 12.954 4 24s8.954 20 20 20Z"/><path d="M24 44c7.732 0 14-6.268 14-14s-6.268-14-14-14s-14 6.268-14 14s6.268 14 14 14Z"/><path d="M24 44a8 8 0 1 0 0-16a8 8 0 0 0 0 16Z"/></g></svg>
-                        </div>
-                        <p className="font-['Neue_Haas_Grotesk_Display_Pro:55_Roman',sans-serif] leading-[28px] md:leading-[32px] text-[#f1eee7] text-[14px] md:text-[16px] text-center whitespace-nowrap tracking-[0.64px]">Research</p>
-                      </div>
-                      <div aria-hidden="true" className="absolute border-[#ccc] border-[2px] md:border-[3px] border-solid inset-0 pointer-events-none rounded-[10px]" />
-                    </div>
-                  </div>
-                </div>
-              </Link>
-
-              {/* Card 5 — The Amazing Thing You Can't Explain */}
-              <Link to="/case-study/pantegral" className="flex flex-col items-center px-4 py-8 md:py-[40px] relative rounded-[10px] min-h-[400px] md:min-h-[511px] card-hover" data-animate="stagger-5">
-                <div aria-hidden="true" className="absolute inset-0 pointer-events-none rounded-[10px]">
-                  <img alt="" className="absolute w-full h-full object-cover rounded-[10px]" src={imgFrame49} />
-                  <div className="absolute bg-gradient-to-b from-[#000000] from-[18.75%] inset-0 rounded-[10px] to-[rgba(0,0,0,0)]" />
-                </div>
-                <div aria-hidden="true" className="absolute border-[#818380] border-4 md:border-[6px] border-solid inset-[-4px] md:inset-[-6px] pointer-events-none rounded-[14px] md:rounded-[16px]" />
-                <div className="flex flex-col h-full items-end justify-between relative z-10 w-full">
-                  <div className="flex items-start w-full">
-                    <p className="font-['Neue_Haas_Grotesk_Display_Pro:96_Black_Italic',sans-serif] italic leading-tight text-[#e1c78f] text-[32px] md:text-[40px] lg:text-[48px] tracking-[-0.96px] uppercase">The Amazing Thing You Can't Explain</p>
-                  </div>
-                  <div className="flex gap-3 md:gap-[16px] items-start justify-end flex-wrap">
-                    <div className="bg-[#555] relative rounded-[10px]">
-                      <div className="flex gap-2 items-center justify-center px-3 md:px-[16px] py-2 md:py-[8px] rounded-[inherit]">
-                        {/* ASSET REPLACED: Content Design icon */}
-                        <div className="w-4 h-4 flex items-center justify-center">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 48 48" className="w-full h-full"><g fill="none" stroke="#F1EEE7" strokeLinejoin="round" strokeWidth="4"><path d="M19 32c-7.732 0-14-6.268-14-14S11.268 4 19 4s14 6.268 14 14"/><path d="M44 18H18v26h26z"/></g></svg>
-                        </div>
-                        <p className="font-['Neue_Haas_Grotesk_Display_Pro:55_Roman',sans-serif] leading-[28px] md:leading-[32px] text-[#f1eee7] text-[14px] md:text-[16px] text-center whitespace-nowrap tracking-[0.64px]">Content</p>
-                      </div>
-                      <div aria-hidden="true" className="absolute border-[#ccc] border-[2px] md:border-[3px] border-solid inset-0 pointer-events-none rounded-[10px]" />
-                    </div>
-                    <div className="bg-[#555] relative rounded-[10px]">
-                      <div className="flex gap-2 items-center justify-center px-3 md:px-[16px] py-2 md:py-[8px] rounded-[inherit]">
-                        {/* ASSET REPLACED: Writing icon */}
-                        <div className="w-4 h-4 flex items-center justify-center">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 48 48" className="w-full h-full"><g fill="none" stroke="#F1EEE7" strokeLinejoin="round" strokeWidth="4"><rect width="36" height="20" x="6" y="6" rx="2"/><path strokeLinecap="round" d="M14 13h8m-8 6h20M8 44l4.889-6h21.778L40 44M24 26v18"/></g></svg>
-                        </div>
-                        <p className="font-['Neue_Haas_Grotesk_Display_Pro:55_Roman',sans-serif] leading-[28px] md:leading-[32px] text-[#f1eee7] text-[14px] md:text-[16px] text-center whitespace-nowrap tracking-[0.64px]">Writing</p>
-                      </div>
-                      <div aria-hidden="true" className="absolute border-[#ccc] border-[2px] md:border-[3px] border-solid inset-0 pointer-events-none rounded-[10px]" />
-                    </div>
-                  </div>
-                </div>
-              </Link>
-
               {/* Card 6 — Teaching the Product to Sell Itself */}
               <Link to="/case-study/product-self-sell" className="flex flex-col items-center px-4 py-8 md:py-[40px] relative rounded-[10px] min-h-[400px] md:min-h-[511px] card-hover" data-animate="stagger-6">
                 <div aria-hidden="true" className="absolute inset-0 pointer-events-none rounded-[10px]">
@@ -455,7 +451,6 @@ function LandingPage() {
                   <div className="flex gap-3 md:gap-[16px] items-start justify-end flex-wrap">
                     <div className="bg-[#555] relative rounded-[10px]">
                       <div className="flex gap-2 items-center justify-center px-3 md:px-[16px] py-2 md:py-[8px] rounded-[inherit]">
-                        {/* ASSET REPLACED: UX icon */}
                         <div className="w-4 h-4 flex items-center justify-center">
                           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 48 48" className="w-full h-full"><g fill="none" stroke="#F1EEE7" strokeLinecap="round" strokeLinejoin="round" strokeWidth="4"><path d="M24 10a3 3 0 1 0 0-6a3 3 0 0 0 0 6m0 34a3 3 0 1 0 0-6a3 3 0 0 0 0 6M7 27a3 3 0 1 0 0-6a3 3 0 0 0 0 6m34 0a3 3 0 1 0 0-6a3 3 0 0 0 0 6"/><path d="M24.197 15.744a8.99 8.99 0 0 0 7.438-3.931a14.5 14.5 0 0 1 4.686 4.498A9 9 0 0 0 32 24a9 9 0 0 0 4.527 7.811a14.5 14.5 0 0 1-4.426 4.532a9 9 0 0 0-7.905-4.694c-3.4 0-6.36 1.885-7.89 4.668a14.5 14.5 0 0 1-4.494-4.683a8.99 8.99 0 0 0 3.93-7.438a8.99 8.99 0 0 0-3.907-7.422a14.5 14.5 0 0 1 4.94-4.938a8.99 8.99 0 0 0 7.42 3.907"/></g></svg>
                         </div>
@@ -465,7 +460,6 @@ function LandingPage() {
                     </div>
                     <div className="bg-[#555] relative rounded-[10px]">
                       <div className="flex gap-2 items-center justify-center px-3 md:px-[16px] py-2 md:py-[8px] rounded-[inherit]">
-                        {/* ASSET REPLACED: Content Design icon */}
                         <div className="w-4 h-4 flex items-center justify-center">
                           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 48 48" className="w-full h-full"><g fill="none" stroke="#F1EEE7" strokeLinejoin="round" strokeWidth="4"><path d="M19 32c-7.732 0-14-6.268-14-14S11.268 4 19 4s14 6.268 14 14"/><path d="M44 18H18v26h26z"/></g></svg>
                         </div>
